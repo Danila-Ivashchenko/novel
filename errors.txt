@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 25: expected end of line
-    stop music "audio/main_morive.mp3"
-               ^
+File "game/end_1.rpy", line 2: expected '=' not found.
+    image end_1 "images/scenes/Frame_2.png"
+                ^
+
+File "game/end_3.rpy", line 2: expected '=' not found.
+    image end_bg_3 'images/scenes/nespravedlivo.png'
+                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090602
-Fri Sep  9 12:25:37 2022
+Fri Sep  9 13:20:16 2022

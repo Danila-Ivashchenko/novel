@@ -1,5 +1,5 @@
 ﻿label day_2:
-
+    play music "audio/main_motiv.mp3"
     scene bg_r  with fade
 
     show g normal
@@ -27,12 +27,13 @@
     b "Слышь, маленький *****, разминай лицо, сейчас буду тебя бить."
 
     $end = False
+    stop music
     menu:
         "Твои действия?"
         "Ааа, не бей, пожалуйста!":
             pass
         "Ты не ударишь меня, я стал очень богатым)0000))))000))":
-            $ bad_answer += 1
+            $ bad_answers += 1
             $ end = True
     if end:
         show g scared at posR
@@ -44,10 +45,10 @@
         b "ААААРГРХРХРХРХР!!!"
 
     show b normal at posL
-    stop music
     play sound "audio/fight.mp3"
     show g beaten at posR with hpunch and vpunch
     b "Не попадайся мне на глаза, ********!"
     g "*Плачет*"
+    stop sound
     jump day_3
     return

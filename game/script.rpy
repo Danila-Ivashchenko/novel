@@ -2,9 +2,12 @@
     $ bad_answers = 0
     $ end = False
 label start:
-    play music "audio/main_motiv.mp3"
-    $ name = renpy.input("Как вас зовут?")
+    stop music
+    $ name = ""
+    while name == "":
+        $ name = renpy.input("Как вас зовут?")
 
+    play music "audio/playground.wav"
     scene bg_pg
     show g normal
 
@@ -23,11 +26,11 @@ label start:
             $ end = True
     if end:
         stop music
-        play sound "audio/win-police.mp3"
         g "Приехала полиция"
+        jump end_1
     else:
         g "Что же тут, оооо, деньги, кайфффф"
-        g "Пойду куплю покушаю"
+        g "Пойду куплю покушать"
     jump day_2
-
+    stop music
     return

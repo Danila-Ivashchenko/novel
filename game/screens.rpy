@@ -352,6 +352,10 @@ screen main_menu():
 
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
+
+    python:
+        renpy.music.queue("audio/menu.mp3",channel = "music", fadein = 1)
+        
     tag menu
 
     imagemap:
