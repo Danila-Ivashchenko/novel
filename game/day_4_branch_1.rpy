@@ -1,9 +1,9 @@
 label day_4_branch_1:
     scene school_corridor
 
-    show g_smile at posL
+    show gr_smile at posR
 
-    show b_normal at posR
+    show b_normal at posL
 
     g "Подожди, громила, не торопись. Я предложу тебе то, от чего ты не сможешь отказаться."
 
@@ -13,16 +13,16 @@ label day_4_branch_1:
 
     scene school_corridor
 
-    show g_smile at posL
+    show gr_smile at posR
 
-    show b_slave at posR
+    show b_slave at posL
 
     e "[name] сидит на задней парте, вокруг него вьются девочки, сбоку стоит гопник и охраняет его."
 
     if bad_answers > 5:
         scene school_corridor
 
-        show g_smile
+        show gr_smile
 
         g "Знаете, я ведь могу купить даже жену директора, хахах."
 
@@ -33,23 +33,23 @@ label day_4_branch_1:
     else:
         scene school_corridor
 
-        show g_smile
+        show gr_smile
 
         g "Знаете, я ведь могу купить всё, о чем вы и мечтать не могли."
 
         e "*Девочки умиляются*"
 
-        play sound "womens_laugh.mp3"
+        play sound "audio/womens_laugh.mp3"
     
     scene school_corridor
 
-    show g_1
+    show first
 
     girl_1 "Знаешь, ты мне... нравишься... Давай п-п-погуляем вечером после школы..."
 
     e "*закручивает волосы*"
 
-    play sound "uwu.mp3"
+    play sound "audio/uwu.mp3"
 
     menu:
         "Ваше действие?"
@@ -64,17 +64,11 @@ label day_4_branch_1:
 
             e "Девочка и [name] приходят к ней домой"
 
-            show g_normal at posL
+            show gr_normal at posL
 
-            show g_1 at posR
-
-            scene girl_room
+            show first at posR
 
             e "Девочка кидает [name] на кровать и садится на него сверху."
-
-            show g_1 at posR
-
-            show g_normal at posL
 
             girl_1 "я т-тебя л-люблю..."
 
@@ -82,7 +76,7 @@ label day_4_branch_1:
 
             girl_1 "Признавайся! Откуда у тебя на всё это?! Я тебя убью, если не скажешь, куда спрятал их!"
 
-            play sound "knife.mp3"
+            play sound "audio/knife.mp3"
 
             menu:
                 "Ваше действие?"
@@ -93,19 +87,19 @@ label day_4_branch_1:
             
             scene girl_room
 
-            show g_1 at posL
+            show first at posL
 
-            show g_scared at posR
+            show gr_normal at posR
 
             girl_1 "Ты был мне полезен ровно до этого момента. Теперь попращайся со своей жизнью!"
 
-            hide g_1
+            hide first
 
-            hide g_scared
+            hide gr_normal
 
             e "Девочка пронзает шею [name]"
 
-            play sound "roblox-death-sound-effect.mp3"
+            play sound "audio/roblox-death-sound-effect.mp3"
 
             "Главный герой был зарезан девушкой."
 
