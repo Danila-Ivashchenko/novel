@@ -5,8 +5,8 @@ label day_4_branch_2:
 
     scene bg_sc
 
-    show gr mone at posR
-    show b normal at posL
+    show gr_mone at posR
+    show b_normal at posL
 
     b "Ах ты мелкий......."
 
@@ -20,9 +20,10 @@ label day_4_branch_2:
     if day_4_left_school:
         if bad_answers >= 6:
             scene bg_pg
-            n "*Главный герой несколько часов гуляет по улице, обдумывая правильно ли он поступил, что убежал*\n*Из-за поворота выходит подозрительный мужчина*
+            n "*Главный герой несколько часов гуляет по улице, обдумывая правильно ли он поступил, что убежал*
+            *Из-за поворота выходит подозрительный мужчина*
     Бандит: *Кричит имя главного героя* и ускоряет шаг"
-            show gr normal at posL
+            show gr_normal at posL
             show bandit at posR
 
             n "*Бандит хватает мальчика*"
@@ -46,25 +47,25 @@ label day_4_branch_2:
 
                 return
             else:
-                b slave "Моли о пощаде, ботан."
+                b_slave "Моли о пощаде, ботан."
                 gr_normal "Оставь меня в покое, п..п...прошу!"
                 
                 return
     else:
         b "B: *В недоумении* Ты оборзел! В себя поверил?? *Замахивается рукой*"
         e "*В драку вмешивается директор*"
-        hide gr mone
-        hide b normal
-        show d angry
-        show gr mone at posRl
-        show b normal at posLl
+        hide gr_mone
+        hide b_normal
+        show d_angry
+        show gr_mone at posRl
+        show b_normal at posLl
         d "Юноши, что вы себе позволяете, срочно в мой кабинет! Я вызываю в школу ваших родителей"
-        hide gr mone
-        hide b normal
-        hide d angry
+        hide gr_mone
+        hide b_normal
+        hide d_angry
         e "[name] ждёт свою мать в кабинете директора."
-        show m normal at posL
-        show gr normal at posR
+        show m_normal at posL
+        show gr_normal at posR
         m "Сынок, что это такое?! И что за одежда на тебе?!Я тебе её не покупала!"
         e "[name] сознаётся во всём."
         gr "Мама, я нашёл денбги и купил себе вещи."

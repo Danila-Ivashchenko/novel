@@ -12,7 +12,7 @@ label day_4:
 
     scene school
 
-    show g_normal
+    show gr_normal
     
     e "[name] приходит в школу"
 
@@ -36,7 +36,7 @@ label day_4:
         "*Пройти мимо*":
             $root = True
         "*Подмигнуть одноклассницам*":
-            $answer += 1
+            $bad_answers += 1
     
     scene school_corridor
 
@@ -44,18 +44,20 @@ label day_4:
 
     show b_normal at posL
 
-    show g_normal at posR
+    show gr_normal at posR
 
     b "Э, анимешник, потеряйся. Ты меня, видимо, не понял в прошлый раз. Походу, придется напомнить твое место."
 
-    show g_scared at posR
+    hide gr_normal
+
+    show gr_smile at posR
 
     menu:
         "Предложить сотрудничество.":
-            $answer += 1
+            $bad_answers += 1
             jump day_4_branch_1 
         "Ударить по лицу пачкой денег.":
-            $answer += 2   
+            $bad_answers += 2   
             jump day_4_branch_2
             
     
