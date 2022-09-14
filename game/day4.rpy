@@ -2,7 +2,7 @@ label day_4:
 
     scene room
 
-    show g_normal
+    show gr normal
 
     e "[name] просыпается и собирается в школу в новых вещах"
 
@@ -12,7 +12,7 @@ label day_4:
 
     scene school
 
-    show gr_normal
+    show gr normal
     
     e "[name] приходит в школу"
 

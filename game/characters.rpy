@@ -36,7 +36,7 @@ image gr mone  = "images/characters/gr_mone.png"
 image m normal  = "images/characters/m_normal.png"
 image d angry  = "images/characters/d_angry.png"
 
-image g_1   = "images/characters/firslt.png"
+image g_1   = "images/characters/first.png"
 image g_2  = "images/characters/second.png"
 image g_3  = "images/characters/third.png"
 
@@ -50,7 +50,7 @@ image bandit = "images/characters/bandit.png"
 
 
 init:
-    $ posR = Position(xalign=0.8, yalign=1)
-    $ posL = Position(xalign=0.2, yalign=1)
-    $ posRl = Position(xalign=0.9, yalign=1)
-    $ posLl = Position(xalign=0.1, yalign=1)
+    $ posR = Position(xalign=0.8, yalign=0.99)
+    $ posL = Position(xalign=0.2, yalign=0.99)
+    $ posRl = Position(xalign=0.9, yalign=0.99)
+    $ posLl = Position(xalign=0.1, yalign=0.99)

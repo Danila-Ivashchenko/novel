@@ -2,13 +2,23 @@
 errors listed below, and try again.
 
 
-File "game/end_1.rpy", line 2: expected '=' not found.
-    image end_1 "images/scenes/Frame_2.png"
-                ^
+The label end_1 is defined twice, at File "game/end_1.rpyc", line 3:
 
-File "game/end_3.rpy", line 2: expected '=' not found.
-    image end_bg_3 'images/scenes/nespravedlivo.png'
-                   ^
+and File "game/ends.rpy", line 13:
+label end_1:
+
+
+The label end_2 is defined twice, at File "game/end_2.rpyc", line 3:
+
+and File "game/ends.rpy", line 22:
+label end_2:
+
+
+The label end_3 is defined twice, at File "game/end_3.rpyc", line 3:
+
+and File "game/ends.rpy", line 31:
+label end_3:
+
 
 Ren'Py Version: Ren'Py 8.0.3.22090602
-Fri Sep  9 13:20:16 2022
+Fri Sep  9 14:18:03 2022

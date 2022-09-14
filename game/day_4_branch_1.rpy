@@ -1,9 +1,9 @@
 label day_4_branch_1:
     scene school_corridor
 
-    show gr_smile at posR
+    show gr smile at posR
 
-    show b_normal at posL
+    show b normal at posL
 
     g "Подожди, громила, не торопись. Я предложу тебе то, от чего ты не сможешь отказаться."
 
@@ -11,29 +11,27 @@ label day_4_branch_1:
 
     b "Хах... ты мне деньги? За это мне просто не нужно бить тебя? Хорошо."
 
-    scene school_corridor
+    scene bg_sc
 
-    show gr_smile at posR
+    show gr smile at posR
 
-    show b_slave at posL
+    show b slave at posL
 
     e "[name] сидит на задней парте, вокруг него вьются девочки, сбоку стоит гопник и охраняет его."
 
     if bad_answers > 5:
-        scene school_corridor
 
-        show gr_smile
+        show gr smile
 
-        g "Знаете, я ведь могу купить даже жену директора, хахах."
+        girl_1 "Знаете, я ведь могу купить даже жену директора, хахах."
 
         e "Девочки смеются."
 
         play sound "womens_laugh.mp3"
     
     else:
-        scene school_corridor
 
-        show gr_smile
+        show gr smile
 
         g "Знаете, я ведь могу купить всё, о чем вы и мечтать не могли."
 
@@ -41,11 +39,11 @@ label day_4_branch_1:
 
         play sound "audio/womens_laugh.mp3"
     
-    scene school_corridor
+    scene bg_sc
 
-    show first
+    show g_1
 
-    girl_1 "Знаешь, ты мне... нравишься... Давай п-п-погуляем вечером после школы..."
+    g "Знаешь, ты мне... нравишься... Давай п-п-погуляем вечером после школы..."
 
     e "*закручивает волосы*"
 
@@ -56,27 +54,34 @@ label day_4_branch_1:
         "Отказаться от предложения":
             e "*Проходит 20 лет*"
             if bad_answers > 4:
-                "[name] заметил перемены в себе, он решил, что неожиданные деньги только искушают его. Он отдал все деньги в благотворительность и стал жить как раньше."
+                jump end_4
             else:
-                "[name] со временем научился разумно пользоваться деньгами. На них он смог прожить счастливую жизнь, ни в чем себе не отказывая."
-        "Согласиться на её предложение":
-            scene girl_room
+                jump end_5
 
+
+        "Согласиться на её предложение":
+
+            scene bg_gr
+            stop music
+            stop sound
+            play music "audio/Love.mp3"
             e "Девочка и [name] приходят к ней домой"
 
-            show gr_normal at posL
+            show gr normal at posL
 
-            show first at posR
+            show g_1 at posR
 
             e "Девочка кидает [name] на кровать и садится на него сверху."
 
             girl_1 "я т-тебя л-люблю..."
 
-            scene knife
+            scene bg_k
 
-            girl_1 "Признавайся! Откуда у тебя на всё это?! Я тебя убью, если не скажешь, куда спрятал их!"
-
+            stop music
             play sound "audio/knife.mp3"
+            girl_1 "Признавайся! Откуда у тебя деньги на всё это?! Я тебя убью, если не скажешь, куда спрятал их!"
+
+
 
             menu:
                 "Ваше действие?"
@@ -84,23 +89,18 @@ label day_4_branch_1:
                     pass
                 "Я во всём сознаюсь, только не убивай!!!":
                     pass
-            
-            scene girl_room
-
-            show first at posL
-
-            show gr_normal at posR
+        
 
             girl_1 "Ты был мне полезен ровно до этого момента. Теперь попращайся со своей жизнью!"
 
-            hide first
-
-            hide gr_normal
 
             e "Девочка пронзает шею [name]"
 
+            stop sound
+            stop music
             play sound "audio/roblox-death-sound-effect.mp3"
 
-            "Главный герой был зарезан девушкой."
+            jump end_6
+
 
 
